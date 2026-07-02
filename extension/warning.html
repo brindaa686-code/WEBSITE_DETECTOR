@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Phishing Warning</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Segoe UI, sans-serif;
+      background: #0a0000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
+    .icon { font-size: 80px; margin-bottom: 20px; }
+    h1 { font-size: 36px; color: #ff4444; margin-bottom: 10px; }
+    .sub { font-size: 18px; color: #ff8888; margin-bottom: 30px; }
+    .prob {
+      font-size: 64px;
+      font-weight: bold;
+      color: #ff4444;
+      margin-bottom: 8px;
+    }
+    .prob-label {
+      color: #ff8888;
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    .url-box {
+      background: #1a0000;
+      border: 1px solid #ff4444;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 20px;
+      word-break: break-all;
+      font-size: 14px;
+      color: #ff8888;
+      text-align: left;
+    }
+    .url-box strong {
+      color: #ff4444;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .warn-list {
+      background: #1a0a00;
+      border: 1px solid #ffaa00;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .warn-list p {
+      color: #ffdd88;
+      font-size: 14px;
+      margin: 6px 0;
+    }
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-back {
+      padding: 14px 28px;
+      background: #00cc66;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      flex: 1;
+      max-width: 220px;
+    }
+    .btn-proceed {
+      padding: 14px 28px;
+      background: transparent;
+      color: #ff4444;
+      border: 2px solid #ff4444;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      flex: 1;
+      max-width: 220px;
+    }
+    .btn-back:hover { background: #00aa55; }
+    .btn-proceed:hover { background: #1a0000; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🚨</div>
+    <h1>PHISHING DETECTED!</h1>
+    <p class="sub">This website has been blocked for your safety</p>
+    <div class="prob" id="prob">---%</div>
+    <p class="prob-label">chance of being a phishing attack</p>
+    <div class="url-box">
+      <strong>Blocked URL:</strong>
+      <span id="blocked-url">Loading...</span>
+    </div>
+    <div class="warn-list" id="warnings"></div>
+    <div class="buttons">
+      <button class="btn-back" onclick="history.back()">
+        ← Go Back to Safety
+      </button>
+      <button class="btn-proceed" onclick="proceed()">
+        Proceed Anyway (Risky)
+      </button>
+    </div>
+  </div>
+  <script src="warning.js"></script>
+</body>
+</html>
