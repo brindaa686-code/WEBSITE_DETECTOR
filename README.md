@@ -1,8 +1,10 @@
 🛡️ AI-Powered Phishing Detection System
+
      An intelligent web security solution that detects phishing websites using Machine Learning. 
   Built with FastAPI, React, Scikit-learn, and a Chrome Extension.
 
  📖 Overview
+       
        Phishing attacks continue to be one of the most prevalent cybersecurity threats, tricking users into revealing sensitive information through fraudulent websites.
 This project presents an AI-powered phishing detection system capable of analyzing website URLs in real time and classifying them as **Legitimate** or **Phishing**. The system extracts multiple URL-based security features, processes them through a trained Machine Learning model, and returns prediction results with confidence scores and risk analysis.
 
