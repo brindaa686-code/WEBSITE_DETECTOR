@@ -1,19 +1,17 @@
-pandas
-numpy
-scikit-learn
-xgboost
-shap
-joblib
-imbalanced-learn
-tldextract
-python-whois
-dnspython
-requests
-beautifulsoup4
-fastapi
-uvicorn
-pydantic
-pytest
-black
-matplotlib
-seaborn
+# API
+fastapi~=0.139
+uvicorn~=0.50
+pydantic~=2.13
+
+# Machine learning
+scikit-learn~=1.9
+pandas~=3.0
+numpy~=2.5
+joblib~=1.5
+
+# Feature extraction
+tldextract~=5.3
+python-whois~=0.9
+
+# Testing
+pytest~=9.1
